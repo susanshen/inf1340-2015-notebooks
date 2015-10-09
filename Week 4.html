@@ -209,7 +209,13 @@ div#notebook {
 </ul>
 <h1 id="Assignment-1">Assignment 1<a class="anchor-link" href="#Assignment-1">&#182;</a></h1><ul>
 <li>Take note of the announcement regarding FAQs on Blackboard</li>
-<li>Test cases are now available in my repo</li>
+<li>Test cases are now available in my repo<ul>
+<li>Perform a fetch to add them to your fork</li>
+</ul>
+</li>
+</ul>
+<h1 id="Lecture-Notes">Lecture Notes<a class="anchor-link" href="#Lecture-Notes">&#182;</a></h1><ul>
+<li>Now available on github <code>https://github.com/benevolentprof/inf1340-2015-notebooks</code></li>
 </ul>
 
 </div>
@@ -350,7 +356,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Let's-try">Let's try<a class="anchor-link" href="#Let's-try">&#182;</a></h1><p><code>x &gt; y and a &lt; b</code></p>
-<p><code>x == y or x == y</code></p>
+<p><code>x == y or a == b</code></p>
 <p><code>not(x &gt; y)</code></p>
 
 </div>
@@ -358,13 +364,34 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">b</span> <span class="o">=</span>  <span class="mi">2000</span>
+
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -379,7 +406,7 @@ div#notebook {
 <li><code>x &gt;=20 and x &lt;= 40</code></li>
 </ul>
 </li>
-<li><p>To check if a value is outside a rang, best to use <code>or</code></p>
+<li><p>To check if a value is outside a range, best to use <code>or</code></p>
 <ul>
 <li><code>x &lt; 20 or x &gt; 40</code></li>
 </ul>
@@ -399,7 +426,18 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="c"># Not correct</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;You can vote&quot;</span><span class="p">)</span>
+
+<span class="c"># Correct</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;You can vote&quot;</span><span class="p">)</span>
+
+<span class="c"># Correct, but less desirable</span>
+<span class="c"># Possibly incorrect if age is a float</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;You can vote&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -430,7 +468,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">vowel_or_consonant</span><span class="p">():</span>
@@ -462,10 +500,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">vowel_or_consonant</span><span class="p">()</span>
+<span class="n">vowel_or_consonant</span><span class="p">()</span>
+<span class="n">vowel_or_consonant</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -480,6 +520,8 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Input a letter of the alphabet: a
 vowel
+Input a letter of the alphabet: b
+consonant
 </pre>
 </div>
 </div>
@@ -494,7 +536,7 @@ vowel
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="while-Loop">while Loop<a class="anchor-link" href="#while-Loop">&#182;</a></h1><ul>
-<li>Condition controlled loop</li>
+<li>Controlled loop by a conditional statement</li>
 <li>Runs a statement or set of statements repeats as long as a (while) condition is true.<ul>
 <li>A pre-test loop</li>
 </ul>
@@ -512,17 +554,89 @@ vowel
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># Create a variable to control the loop</span>
+<div class=" highlight hl-ipython2"><pre><span class="c"># Write a program that will echo back what the user types in</span>
 
-<span class="n">keep_going</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
+<span class="c"># Inputs: string from user, choice on whether to continue</span>
+<span class="c"># Processing: None</span>
+<span class="c"># Output: print string from user</span>
 
-<span class="c"># Test a bunch of letters</span>
+<span class="c"># Create a variable to control the loop</span>
+
+<span class="n">keep_going</span> <span class="o">=</span> <span class="s">&quot;y&quot;</span>
+
+<span class="k">while</span> <span class="n">keep_going</span> <span class="o">==</span> <span class="s">&quot;y&quot;</span><span class="p">:</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;What did you say? &quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">user_input</span><span class="p">)</span>
+    
+    <span class="n">keep_going</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Again? Enter y &quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What did you say? fee
+fee
+Again? Enter yy
+What did you say? fi
+fi
+Again? Enter yy
+What did you say? fum
+fum
+Again? Enter yn
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c"># Write a program that will echo back what the user types in</span>
+
+<span class="c"># Inputs: string from user, choice on whether to continue</span>
+<span class="c"># Processing: None</span>
+<span class="c"># Output: print string from user</span>
+
+<span class="c"># Create a variable to control the loop</span>
+
+<span class="n">keep_going</span> <span class="o">=</span> <span class="s">&quot;y&quot;</span>
+
+<span class="k">while</span> <span class="n">keep_going</span> <span class="o">==</span> <span class="s">&quot;y&quot;</span><span class="p">:</span>
+    
+    <span class="n">keep_going</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Again? Enter y &quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Again? Enter y y
+Again? Enter y afsdfsdfd
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -546,7 +660,10 @@ vowel
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="c"># Don&#39;t do this</span>
+<span class="c"># This is an infinite loop, because loop condition never changes</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;One Infinite Loop&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -560,7 +677,7 @@ vowel
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="for-Loop">for Loop<a class="anchor-link" href="#for-Loop">&#182;</a></h1><ul>
-<li>Count controlled loop</li>
+<li>Loop controlled by a count or list</li>
 <li>Runs for a specified number of times</li>
 <li>Three important parts: loop index (or target variable), loop range, and statements</li>
 </ul>
@@ -575,7 +692,7 @@ vowel
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
@@ -586,16 +703,85 @@ vowel
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&quot;giraffe&quot;</span><span class="p">,</span> <span class="s">&quot;otter&quot;</span><span class="p">,</span> <span class="s">&quot;bears&quot;</span><span class="p">,</span> <span class="s">&quot;panda&quot;</span><span class="p">,</span> <span class="s">&quot;capybara&quot;</span><span class="p">,</span> <span class="s">&quot;elephant&quot;</span><span class="p">,</span> <span class="s">&quot;python&quot;</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>giraffe
+otter
+bears
+panda
+capybara
+elephant
+python
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="mf">75.62</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+string
+75.62
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -615,14 +801,42 @@ vowel
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span class="c"># These two loops are not the same!</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -638,28 +852,66 @@ vowel
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">7</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+8
+15
+22
+29
+36
+43
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -679,7 +931,11 @@ vowel
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="n">iterations</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;How many times? &quot;</span><span class="p">)</span>
+<span class="n">iterations</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">iterations</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iterations</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -702,16 +958,43 @@ vowel
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># This program calculates the sum of a series of </span>
 <span class="c"># numbers entered by the user</span>
 
-<span class="nb">max</span> <span class="o">=</span> <span class="mi">5</span> <span class="c"># The maximum number of inputs</span>
+<span class="n">iterations</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;How many times? &quot;</span><span class="p">)</span>
+<span class="n">iterations</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">iterations</span><span class="p">)</span>
+
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">product</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">iterations</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">+=</span> <span class="n">count</span>
+    <span class="n">product</span> <span class="o">*=</span> <span class="n">count</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>How many times? 5
+15
+120
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -741,44 +1024,15 @@ vowel
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Let&#39;s re-write the examples</span>
-</pre></div>
+<span class="c"># Example: x = x + 1</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
 
-</div>
-</div>
-</div>
+<span class="c"># Example: total = total + number</span>
+<span class="n">total</span> <span class="o">+=</span> <span class="n">number</span>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Nested-Loop">Nested Loop<a class="anchor-link" href="#Nested-Loop">&#182;</a></h1><ul>
-<li>We can have loops inside of loops</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># This program displays a rectangular pattern of asterisks</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># This program displays a triangle pattern of asterisks</span>
+<span class="c"># Example: balance = balance - withdrawal</span>
+<span class="n">balance</span> <span class="o">-=</span> <span class="n">withdrawal</span>
 </pre></div>
 
 </div>
@@ -796,7 +1050,7 @@ vowel
 <li>Option 2. Work on your assignment.</li>
 <li>Option 3. None of the above.</li>
 </ul>
-<h1 id="Exercise:-Greatest-Common-Divisor">Exercise: Greatest Common Divisor<a class="anchor-link" href="#Exercise:-Greatest-Common-Divisor">&#182;</a></h1><p>The greatest common divisor of two positive integers, n and m, is the largest number, d, that divides evening into both n and m. Here is one algorithm to solve this problem.</p>
+<h1 id="Exercise:-Greatest-Common-Divisor">Exercise: Greatest Common Divisor<a class="anchor-link" href="#Exercise:-Greatest-Common-Divisor">&#182;</a></h1><p>The greatest common divisor of two positive integers, n and m, is the largest number, d, that divides evenly into both n and m. Here is one algorithm to solve this problem.</p>
 <p>``` Initialize d to the smaller of m and n
     While d does not evening divide m or d does not evening divide n do
         Decrease the value of d by 1
